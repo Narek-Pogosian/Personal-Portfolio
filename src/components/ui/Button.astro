@@ -1,0 +1,38 @@
+---
+import { cva, type VariantProps } from "class-variance-authority";
+import type { HTMLAttributes } from "astro/types";
+import { cn } from "@/lib/utils";
+
+const button = cva(
+  "inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 focus-visible:ring-offset-2 focus-visible:ring-primary focus-visible:ring-offset-background",
+  {
+    variants: {
+      variant: {
+        primary:
+          "bg-gradient-to-r relative from-primary-600 to-primary text-white shadow after:w-full after:bg-gradient-to-r after:from-transparent after:via-white/25 after:to-transparent after:h-full after:duration-500 after:absolute after:-left-full hover:after:animate-shine overflow-hidden",
+        ghost: "",
+      },
+      size: {
+        sm: "h-8 px-2",
+        md: "h-9 px-4 py-2",
+        lg: "h-11  px-8",
+        icon: "h-9 w-9",
+      },
+    },
+
+    compoundVariants: [{ variant: "primary", size: "md" }],
+  },
+);
+
+export interface Props
+  extends HTMLAttributes<"button">,
+    VariantProps<typeof button> {
+  className?: string;
+}
+
+const { variant = "primary", size = "md", className, ...rest } = Astro.props;
+---
+
+<button class={cn(button({ variant, size }), className)} {...rest}>
+  <slot />
+</button>

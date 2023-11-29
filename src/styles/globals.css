@@ -1,8 +1,16 @@
 :root {
-  --primary: 350, 84%, 55%;
+  --primary: 350, 84%, 53%;
   --primary-300: 353, 96%, 82%;
   --primary-400: 351, 95%, 71%;
-  --primary-600: 347, 77%, 48%;
+  --primary-600: 347, 77%, 42%;
+
+  --background: 240, 10%, 97%;
+  --foreground: 240 10% 3%;
+}
+
+.dark {
+  --background: 240, 10%, 10%;
+  --foreground: 240, 10%, 90%;
 }
 
 html,
@@ -21,12 +29,10 @@ html {
   }
 }
 
-html.dark {
-  color-scheme: dark;
-}
-
 body {
   overflow-y: scroll;
+  background-color: hsl(var(--background));
+  color: hsl(var(--foreground));
 }
 
 ::-webkit-scrollbar {
@@ -38,6 +44,6 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #888;
-  border-radius: 5px;
+  background: hsla(var(--primary), 0.5);
+  border-radius: 5px; 
 }
