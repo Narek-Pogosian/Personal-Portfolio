@@ -9,36 +9,36 @@ import Button from "./ui/Button.astro";
 </Button>
 
 <script is:inline>
-function colorMode() {
-  if (
-    !localStorage.getItem("theme") &&
-    window.matchMedia("(prefers-color-scheme:dark)").matches
-  ) {
-    document.documentElement.classList.add("dark");
-    localStorage.setItem("theme", "dark");
-  } else if (localStorage.getItem("theme") === "dark") {
-    document.documentElement.classList.add("dark");
-  } else {
-    document.documentElement.classList.remove("dark");
+  function colorMode() {
+    if (
+      !localStorage.getItem("theme") &&
+      window.matchMedia("(prefers-color-scheme:dark)").matches
+    ) {
+      document.documentElement.classList.add("dark");
+      localStorage.setItem("theme", "dark");
+    } else if (localStorage.getItem("theme") === "dark") {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
   }
-}
 
-function toggleMode() {
-  const storageTheme = localStorage.getItem("theme");
+  function toggleMode() {
+    const storageTheme = localStorage.getItem("theme");
 
-  document.documentElement.classList.toggle("dark");
-  if (storageTheme === "dark") {
-    localStorage.setItem("theme", "light");
-  } else {
-    localStorage.setItem("theme", "dark");
+    document.documentElement.classList.toggle("dark");
+    if (storageTheme === "dark") {
+      localStorage.setItem("theme", "light");
+    } else {
+      localStorage.setItem("theme", "dark");
+    }
   }
-}
 
-colorMode();
-
-document.addEventListener("astro:after-swap", () => {
   colorMode();
-});
 
-document.querySelector("#theme-toggle").addEventListener("click", toggleMode);
+  document.addEventListener("astro:after-swap", () => {
+    colorMode();
+  });
+
+  document.querySelector("#theme-toggle").addEventListener("click", toggleMode);
 </script>

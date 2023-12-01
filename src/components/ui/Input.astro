@@ -1,0 +1,20 @@
+---
+import type { HTMLAttributes } from "astro/types";
+
+export interface Props extends HTMLAttributes<"input"> {
+  type?: "text" | "number" | "email" | "password" | "search";
+}
+
+const { type, ...rest } = Astro.props;
+---
+
+<div
+  class="relative w-80 after:absolute after:h-[2px] after:w-full after:bg-primary after:-bottom-[2px] after:left-0 after:scale-x-0 after:scale-y-100 focus-within:after:scale-x-100 after:transition-transform after:duration-300"
+>
+  <input
+    type={type}
+    placeholder="Input"
+    class="relative w-full outline-none rounded-md p-2 shadow bg-white dark:bg-white/5 focus:rounded-none transition-all duration-300"
+    {...rest}
+  />
+</div>

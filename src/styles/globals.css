@@ -1,8 +1,9 @@
 :root {
-  --primary: 350, 84%, 53%;
   --primary-300: 353, 96%, 82%;
   --primary-400: 351, 95%, 71%;
+  --primary-500: 350, 84%, 53%; /* Default */
   --primary-600: 347, 77%, 42%;
+  --primary-foreground: 0 0% 100%;
 
   --background: 240, 10%, 97%;
   --foreground: 240 10% 3%;
@@ -19,7 +20,7 @@ body {
 }
 
 html {
-  scroll-padding-top: 100px;
+  /* scroll-padding-top: 100px; */
   scroll-behavior: smooth;
 }
 
@@ -44,6 +45,11 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: hsla(var(--primary), 0.5);
-  border-radius: 5px; 
+  background: hsla(var(--primary), 0.7);
+  border-radius: 5px;
+}
+
+::selection {
+  background-color: hsl(var(--primary-500));
+  color: hsl(var(--primary-foreground));
 }
