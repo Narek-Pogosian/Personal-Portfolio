@@ -1,7 +1,20 @@
 ---
 import ToggleTheme from "../components/ToggleTheme.astro";
+import GitHubIcon from "./icons/GitHubIcon.astro";
+import Link from "./ui/Link.astro";
 ---
 
-<header>
-  <ToggleTheme />
+<header class="py-4 flex justify-between items-center">
+  <a href="/">Logo</a>
+  <div class="flex gap-2 items-center">
+    <ToggleTheme />
+    <Link
+      href="https://github.com/Narek-Pogosian"
+      target="_blank"
+      variant="ghost"
+      size="icon"
+    >
+      <GitHubIcon />
+    </Link>
+  </div>
 </header>

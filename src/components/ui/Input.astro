@@ -9,11 +9,11 @@ const { type, ...rest } = Astro.props;
 ---
 
 <div
-  class="relative w-80 after:absolute after:h-[2px] after:w-full after:bg-primary after:-bottom-[2px] after:left-0 after:scale-x-0 after:scale-y-100 focus-within:after:scale-x-100 after:transition-transform after:duration-300"
+  class="relative after:absolute after:h-[2px] after:w-full after:bg-primary after:-bottom-[2px] after:left-0 after:scale-x-0 after:scale-y-100 focus-within:after:scale-x-100 after:transition-transform after:duration-300"
 >
   <input
     type={type}
-    class="relative w-full outline-none font-medium rounded-md p-2 bg-accent text-accent-foreground focus:rounded-none transition-all duration-300"
+    class="relative w-full outline-none font-medium placeholder:font-normal placeholder:text-muted-foreground rounded-md p-2 bg-accent text-accent-foreground focus:rounded-none transition-all duration-300"
     {...rest}
   />
 </div>
