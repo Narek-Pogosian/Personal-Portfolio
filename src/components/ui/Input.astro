@@ -13,8 +13,7 @@ const { type, ...rest } = Astro.props;
 >
   <input
     type={type}
-    placeholder="Input"
-    class="relative w-full outline-none rounded-md p-2 shadow bg-white dark:bg-white/5 focus:rounded-none transition-all duration-300"
+    class="relative w-full outline-none font-medium rounded-md p-2 bg-accent text-accent-foreground focus:rounded-none transition-all duration-300"
     {...rest}
   />
 </div>

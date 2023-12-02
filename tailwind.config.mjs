@@ -1,6 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 export default {
   content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
+  darkMode: "class",
   theme: {
     container: {
       center: true,
@@ -13,6 +14,13 @@ export default {
           400: "hsl(var(--primary-400))",
           600: "hsl(var(--primary-600))",
           foreground: "hsl(var(--primary-foreground))",
+        },
+        accent: {
+          DEFAULT: "hsl(var(--accent))",
+          foreground: "hsl(var(--accent-foreground))",
+        },
+        muted: {
+          foreground: "hsl(var(--muted-foreground))",
         },
         background: {
           DEFAULT: "hsl(var(--background))",
