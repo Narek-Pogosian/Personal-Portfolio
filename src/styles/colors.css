@@ -1,25 +1,25 @@
 :root {
-  --primary-300: 353, 96%, 82%;
-  --primary-400: 351, 95%, 71%;
-  --primary-500: 350, 84%, 53%; /* Default */
-  --primary-600: 347, 77%, 42%;
+  --primary-300: 252, 95%, 85%;
+  --primary-400: 255, 92%, 76%;
+  --primary-500: 258, 90%, 66%; /* Default */
+  --primary-600: 262, 83%, 58%;
   --primary-foreground: 0 0% 100%;
 
-  --background: 240, 10%, 97%;
-  --foreground: 240 10% 3%;
+  --background: 240, 15%, 97%;
+  --foreground: 240 15% 3%;
 
-  --accent: 240, 10%, 93%;
-  --accent-foreground: 240 10% 3%;
+  --accent: 240, 15%, 94%;
+  --accent-foreground: 240 15% 3%;
 
-  --muted-foreground: 240 10% 40%;
+  --muted-foreground: 240 15% 30%;
 }
 
 .dark {
-  --background: 240, 10%, 10%;
-  --foreground: 240, 10%, 90%;
+  --background: 240, 15%, 10%;
+  --foreground: 240, 15%, 90%;
 
-  --accent: 240, 10%, 15%;
-  --accent-foreground: 240 10% 90%;
+  --accent: 240, 15%, 15%;
+  --accent-foreground: 240 15% 93%;
 
-  --muted-foreground: 240 10% 70%;
+  --muted-foreground: 240 15% 68%;
 }

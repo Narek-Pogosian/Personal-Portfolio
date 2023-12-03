@@ -5,7 +5,7 @@ import Link from "./ui/Link.astro";
 ---
 
 <header class="py-4 flex justify-between items-center">
-  <a href="/">Logo</a>
+  <Link href="/" variant="link" className="!no-underline">Logo</Link>
   <div class="flex gap-2 items-center">
     <ToggleTheme />
     <Link
@@ -14,6 +14,7 @@ import Link from "./ui/Link.astro";
       variant="ghost"
       size="icon"
     >
+      <span class="sr-only">Link to my github</span>
       <GitHubIcon />
     </Link>
   </div>

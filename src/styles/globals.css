@@ -30,7 +30,7 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: hsla(var(--primary), 0.7);
+  background: hsla(var(--primary-500), 0.7);
   border-radius: 5px;
 }
 

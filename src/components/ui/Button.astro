@@ -4,18 +4,19 @@ import type { HTMLAttributes } from "astro/types";
 import { cn } from "@/lib/utils";
 
 export const button = cva(
-  "inline-flex items-center justify-center rounded-md font-medium ring-offset-background transition-colors duration-300 focus-visible:outline-none focus-visible:ring-2 disabled:pointer-events-none disabled:opacity-50 focus-visible:ring-offset-2 focus-visible:ring-primary focus-visible:ring-offset-background",
+  "inline-flex items-center justify-center rounded-md font-medium ring-offset-background transition-colors duration-300 focus-visible:outline-none focus-visible:ring-2 disabled:pointer-events-none disabled:opacity-50 focus-visible:ring-primary",
   {
     variants: {
       variant: {
         primary:
-          "bg-gradient-to-r relative from-primary-600 to-primary text-primary-foreground shadow after:w-full after:bg-gradient-to-r after:from-transparent after:via-white/25 after:to-transparent after:h-full after:duration-500 after:absolute after:-left-full hover:after:animate-shine overflow-hidden",
+          "bg-gradient-to-r relative from-primary-600 to-primary-400 text-primary-foreground shadow after:w-full after:bg-gradient-to-r after:from-transparent after:via-white/25 after:to-transparent focus-visible:ring-offset-2 focus-visible:ring-offset-background after:h-full after:duration-500 after:absolute after:-left-full hover:after:animate-shine overflow-hidden",
         ghost: "hover:bg-accent text-accent-foreground",
+        link: "hover:underline underline-offset-2",
       },
       size: {
-        sm: "h-8 px-2",
-        md: "h-9 px-4 py-2",
-        lg: "h-11  px-8",
+        sm: "py-1 px-2",
+        md: "px-4 py-2",
+        lg: "py-3 px-8",
         icon: "h-9 w-9",
       },
     },
