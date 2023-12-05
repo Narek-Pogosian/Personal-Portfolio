@@ -4,8 +4,14 @@ import GitHubIcon from "./icons/GitHubIcon.astro";
 import Link from "./ui/Link.astro";
 ---
 
-<header class="py-4 flex justify-between items-center">
-  <Link href="/" variant="link" className="!no-underline">Logo</Link>
+<header class="h-16 flex justify-between items-center">
+  <Link
+    href="/"
+    variant="link"
+    className="!no-underline font-bold text-xl px-0 py-1"
+  >
+    LOGO
+  </Link>
   <div class="flex gap-2 items-center">
     <ToggleTheme />
     <Link
