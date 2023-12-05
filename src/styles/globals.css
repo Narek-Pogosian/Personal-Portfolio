@@ -38,3 +38,7 @@ body {
   background-color: hsl(var(--primary-500));
   color: hsl(var(--primary-foreground));
 }
+
+.text-balance {
+  text-wrap: balance;
+}
