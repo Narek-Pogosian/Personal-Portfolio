@@ -4,15 +4,24 @@ import GitHubIcon from "./icons/GitHubIcon.astro";
 import Link from "./ui/Link.astro";
 ---
 
-<header class="h-16 flex justify-between items-center">
-  <Link
-    href="/"
-    variant="link"
-    className="!no-underline font-bold text-xl px-0 py-1"
-  >
-    LOGO
-  </Link>
-  <div class="flex gap-2 items-center">
+<header class="flex h-16 items-center justify-between">
+  <div class="flex items-center gap-4 md:gap-8">
+    <Link
+      href="/"
+      variant="link"
+      size="sm"
+      className="px-0 text-xl font-bold !no-underline"
+    >
+      LOGO
+    </Link>
+    <nav>
+      <ul class="flex gap-1">
+        <li><Link size="sm" variant="link" href="#">Projects</Link></li>
+        <li><Link size="sm" variant="link" href="#">Blog</Link></li>
+      </ul>
+    </nav>
+  </div>
+  <div class="flex items-center gap-2">
     <ToggleTheme />
     <Link
       href="https://github.com/Narek-Pogosian"
