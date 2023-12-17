@@ -1,0 +1,29 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import { createSlug } from "@/lib/utils";
+import { getCollection } from "astro:content";
+
+const posts = await getCollection("blog");
+---
+
+<Layout title="Blogs">
+  <h1 class="mt-2 text-center text-4xl font-bold">Blogs</h1>
+
+  <ul class="mt-8 grid gap-8 md:grid-cols-2 xl:grid-cols-3">
+    {
+      posts.map((post) => (
+        <li class="rounded border border-zinc-300 p-4 dark:border-zinc-800">
+          <a href={`/blog/${createSlug(post.data.title)}`}>
+            <h3 class="text-lg font-bold">{post.data.title}</h3>
+            <p>{post.data.description}</p>
+            <ul>
+              {post.data.tags.map((tag) => (
+                <li class="text-sm font-medium">{tag}</li>
+              ))}
+            </ul>
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+</Layout>

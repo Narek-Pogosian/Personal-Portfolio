@@ -4,7 +4,7 @@ import GitHubIcon from "./icons/GitHubIcon.astro";
 import Link from "./ui/Link.astro";
 ---
 
-<header class="flex h-16 items-center justify-between">
+<header class="flex h-[80px] items-center justify-between">
   <div class="flex items-center gap-4 md:gap-8">
     <Link
       href="/"
@@ -16,8 +16,8 @@ import Link from "./ui/Link.astro";
     </Link>
     <nav>
       <ul class="flex gap-1">
-        <li><Link size="sm" variant="link" href="#">Projects</Link></li>
-        <li><Link size="sm" variant="link" href="#">Blog</Link></li>
+        <li><Link size="sm" variant="link" href="/projects">Projects</Link></li>
+        <li><Link size="sm" variant="link" href="/blog">Blog</Link></li>
       </ul>
     </nav>
   </div>
