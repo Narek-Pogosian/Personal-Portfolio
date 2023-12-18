@@ -17,6 +17,7 @@ const { Content } = await post.render();
 
 <Layout title={post.data.title}>
   <div class="prose dark:prose-invert mx-auto max-w-3xl">
+    <h1>{post.data.title}</h1>
     <Content />
   </div>
 </Layout>

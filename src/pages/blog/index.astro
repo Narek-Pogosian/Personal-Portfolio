@@ -7,7 +7,7 @@ const posts = await getCollection("blog");
 ---
 
 <Layout title="Blogs">
-  <h1 class="mt-2 text-center text-4xl font-bold">Blogs</h1>
+  <h1 class="mt-2 text-center text-4xl font-bold">Blog</h1>
 
   <ul class="mt-8 grid gap-8 md:grid-cols-2 xl:grid-cols-3">
     {
@@ -15,7 +15,7 @@ const posts = await getCollection("blog");
         <li class="rounded border border-zinc-300 p-4 dark:border-zinc-800">
           <a href={`/blog/${createSlug(post.data.title)}`}>
             <h3 class="text-lg font-bold">{post.data.title}</h3>
-            <p>{post.data.description}</p>
+            <p class="text-muted-foreground">{post.data.description}</p>
             <ul>
               {post.data.tags.map((tag) => (
                 <li class="text-sm font-medium">{tag}</li>
