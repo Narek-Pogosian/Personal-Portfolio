@@ -12,12 +12,33 @@ export async function getStaticPaths() {
 }
 
 const { post } = Astro.props;
-const { Content } = await post.render();
+const { Content, headings } = await post.render();
 ---
 
 <Layout title={post.data.title}>
-  <div class="prose dark:prose-invert mx-auto max-w-3xl">
-    <h1>{post.data.title}</h1>
-    <Content />
+  <div class="flex gap-16">
+    {
+      !!headings.length && (
+        <div class="sticky left-0 top-8 hidden h-fit w-[250px] lg:block">
+          <h3 class="mb-2 text-xl font-bold">On this page</h3>
+          <ul class="space-y-2">
+            {headings.map((heading) => (
+              <li>
+                <a
+                  href={`#${heading.slug}`}
+                  class="font-medium italic underline-offset-1 hover:underline"
+                >
+                  {heading.text}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )
+    }
+    <div class="prose mx-auto max-w-3xl dark:prose-invert lg:mx-0">
+      <h1>{post.data.title}</h1>
+      <Content />
+    </div>
   </div>
 </Layout>

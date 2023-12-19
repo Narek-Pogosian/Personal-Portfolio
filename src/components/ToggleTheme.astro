@@ -3,7 +3,7 @@ import ThemeIcon from "./icons/ThemeIcon.astro";
 import Button from "./ui/Button.astro";
 ---
 
-<Button variant="ghost" size="icon" id="theme-toggle">
+<Button variant="ghost" size="icon" id="theme-toggle" transition:persist>
   <span class="sr-only">Toggle theme</span>
   <ThemeIcon />
 </Button>

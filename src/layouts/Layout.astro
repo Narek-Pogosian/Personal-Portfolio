@@ -1,12 +1,15 @@
 ---
 import Header from "@/components/Header.astro";
+import clsx from "clsx";
 import "@/styles/globals.css";
+import { ViewTransitions } from "astro:transitions";
 
 interface Props {
   title: string;
+  isLandingPage?: boolean;
 }
 
-const { title } = Astro.props;
+const { title, isLandingPage } = Astro.props;
 ---
 
 <!doctype html>
@@ -17,12 +20,13 @@ const { title } = Astro.props;
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
+    <ViewTransitions />
     <title>{title}</title>
   </head>
   <body>
     <div class="container">
       <Header />
-      <main class="relative">
+      <main class={"relative " + clsx({ "pb-8 pt-4": !isLandingPage })}>
         <slot />
       </main>
     </div>
