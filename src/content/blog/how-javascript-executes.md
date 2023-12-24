@@ -7,7 +7,7 @@ type: "lesson"
 
 > Everything in JavaScript happens inside a exection context.
 
-## Execution Context siondv sodivn sodinv
+## Execution Context
 
 Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic eligendi itaque distinctio placeat commodi rerum quaerat ullam! Minus nobis doloremque, esse quo minima nisi totam qui sit dolor obcaecati assumenda voluptas nesciunt possimus aperiam unde, ut animi nulla quam distinctio.
 

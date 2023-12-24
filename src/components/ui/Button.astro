@@ -9,14 +9,15 @@ export const button = cva(
     variants: {
       variant: {
         primary:
-          "bg-gradient-to-b relative to-primary-600 from-primary-400 text-primary-foreground shadow after:w-full after:bg-gradient-to-r after:from-transparent after:via-white/25 after:to-transparent focus-visible:ring-offset-2 focus-visible:ring-offset-background after:h-full after:duration-500 after:absolute after:-left-full hover:after:animate-shine overflow-hidden",
+          "bg-gradient-to-b relative to-primary-600 from-primary-400 text-primary-foreground after:w-full after:bg-gradient-to-r after:from-transparent after:via-white/25 after:to-transparent focus-visible:ring-offset-2 focus-visible:ring-offset-background after:h-full after:duration-500 after:absolute after:-left-full hover:after:animate-shine overflow-hidden shadow-lg",
+        secondary: "",
         ghost: "hover:bg-accent text-accent-foreground",
         link: "hover:underline underline-offset-2",
       },
       size: {
-        sm: "py-1 px-2",
-        md: "px-4 py-2",
-        lg: "py-3 px-6 text-lg",
+        sm: "px-4 py-1.5 text-sm",
+        md: "px-6 py-1.5",
+        lg: "px-8 py-3 text-lg",
         icon: "h-9 w-9",
       },
     },
