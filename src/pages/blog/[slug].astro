@@ -1,7 +1,9 @@
 ---
+import SideHeading from "@/components/SideHeading.astro";
 import Layout from "@/layouts/Layout.astro";
 import { createSlug } from "@/lib/utils";
 import { getCollection } from "astro:content";
+
 export async function getStaticPaths() {
   const posts = await getCollection("blog");
 
@@ -23,14 +25,7 @@ const { Content, headings } = await post.render();
           <h3 class="mb-2 text-xl font-bold">On this page</h3>
           <ul class="space-y-2">
             {headings.map((heading) => (
-              <li>
-                <a
-                  href={`#${heading.slug}`}
-                  class="font-medium italic underline-offset-1 hover:underline"
-                >
-                  {heading.text}
-                </a>
-              </li>
+              <SideHeading heading={heading} />
             ))}
           </ul>
         </div>
