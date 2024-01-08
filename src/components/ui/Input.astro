@@ -5,15 +5,15 @@ export interface Props extends HTMLAttributes<"input"> {
   type?: "text" | "number" | "email" | "password" | "search";
 }
 
-const { type, ...rest } = Astro.props;
+const { type = "text", ...rest } = Astro.props;
 ---
 
 <div
-  class="relative after:absolute after:h-[3px] after:w-full after:bg-primary after:-bottom-[2px] after:left-0 after:scale-x-0 after:scale-y-100 focus-within:after:scale-x-100 after:transition-transform after:duration-300"
+  class="relative after:absolute after:-bottom-[2px] after:left-0 after:h-[3px] after:w-full after:scale-x-0 after:bg-primary after:transition-transform after:duration-300 focus-within:after:scale-x-100"
 >
   <input
     type={type}
-    class="relative w-full outline-none font-medium placeholder:font-normal placeholder:text-muted-foreground rounded-md p-2 bg-accent text-accent-foreground focus:rounded-none transition-all duration-300"
+    class="relative w-full rounded-md bg-accent p-2 font-medium text-accent-foreground outline-none transition-all duration-300 placeholder:font-normal placeholder:text-muted-foreground focus:rounded-none"
     {...rest}
   />
 </div>
