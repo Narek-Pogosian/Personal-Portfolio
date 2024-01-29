@@ -5,11 +5,11 @@
   --primary-600: 26, 83%, 56%;
   --primary-foreground: 0 0% 100%;
 
-  --background: 0, 0%, 100%;
+  --background: 0, 0%, 98%;
   --foreground: 0 0% 0%;
 
-  --muted: 0 0% 90%;
-  --muted-foreground: 240 5% 30%;
+  --muted: 0 0% 93%;
+  --muted-foreground: 240 5% 40%;
 
   --accent: 240, 15%, 94%;
   --accent-foreground: 240 10% 3%;
@@ -19,7 +19,7 @@
   --background: 0, 0%, 0%;
   --foreground: 0, 0%, 100%;
 
-  --muted: 0 0% 10%;
+  --muted: 0 0% 15%;
   --muted-foreground: 0 0% 60%;
 
   --accent: 240, 15%, 15%;

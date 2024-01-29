@@ -1,15 +1,13 @@
 ---
 import "@/styles/globals.css";
 import Header from "@/components/Header.astro";
-import clsx from "clsx";
 import { ViewTransitions } from "astro:transitions";
 
 interface Props {
   title: string;
-  isLandingPage?: boolean;
 }
 
-const { title, isLandingPage } = Astro.props;
+const { title } = Astro.props;
 ---
 
 <!doctype html>
@@ -24,11 +22,9 @@ const { title, isLandingPage } = Astro.props;
     <title>{title}</title>
   </head>
   <body>
-    <div class="container">
-      <Header />
-      <main class={"relative " + clsx({ "pb-8 pt-4": !isLandingPage })}>
-        <slot />
-      </main>
-    </div>
+    <Header />
+    <main>
+      <slot />
+    </main>
   </body>
 </html>
