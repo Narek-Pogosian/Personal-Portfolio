@@ -3,15 +3,20 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Home">
-  <section class="container">
-    <h1 class="text-4xl font-bold">Headline</h1>
-    <p class="font-semibold text-muted-foreground">
-      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fuga atque quia
-      quaerat cupiditate adipisci numquam veniam illum temporibus perferendis
-      odio asperiores ipsam obcaecati quibusdam corporis nobis, nulla et!
-      Aperiam eaque, fuga vitae perferendis quo explicabo alias rerum, eum et
-      ullam impedit, iusto dolorem? A ab alias dolor nihil! Deleniti porro ex
-      quasi, ullam rem voluptates inventore eos minima dolores repellat!
-    </p>
+  <section class="container py-20">
+    <div
+      class="absolute left-1/2 top-1/2 -z-10 h-[400px] w-[800px] -translate-x-1/2 -translate-y-1/2 bg-emerald-400 opacity-10 blur-[100px]"
+    >
+    </div>
+    <h1 class="text-center font-bold">
+      <span
+        class="block bg-gradient-to-r from-emerald-400 to-yellow-300 bg-clip-text py-6 text-9xl text-transparent"
+        >Narek Pogosian</span
+      >
+      <span
+        class="-mt-14 block bg-gradient-to-b from-transparent via-black/60 to-black/90 bg-clip-text py-10 text-8xl text-transparent dark:bg-gradient-to-b dark:from-transparent dark:via-white/15 dark:to-white/80"
+        >Web Developer</span
+      >
+    </h1>
   </section>
 </Layout>
