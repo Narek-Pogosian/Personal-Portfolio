@@ -4,27 +4,44 @@ import GitHubIcon from "./icons/GitHubIcon.astro";
 import Link from "./ui/Link.astro";
 ---
 
-<header class="container flex h-[80px] items-center justify-between">
-  <div class="flex items-center gap-4 md:gap-8">
-    <Link
-      href="/"
-      variant="link"
-      size="sm"
-      className="px-0 text-xl font-bold !no-underline"
-    >
-      LOGO
-    </Link>
-  </div>
-  <div class="flex items-center gap-2">
-    <ToggleTheme />
-    <Link
-      href="https://github.com/Narek-Pogosian"
-      target="_blank"
-      variant="ghost"
-      size="icon"
-    >
-      <span class="sr-only">Link to my github</span>
-      <GitHubIcon />
-    </Link>
+<header class="fixed left-0 top-0 w-full" id="main-header">
+  <div class="container flex h-20 items-center justify-between">
+    <div class="flex items-center gap-4 md:gap-8">
+      <Link
+        href="/"
+        variant="link"
+        size="sm"
+        className="px-0 text-xl font-bold !no-underline"
+      >
+        LOGO
+      </Link>
+    </div>
+    <div class="flex items-center gap-2">
+      <ToggleTheme />
+      <Link
+        href="https://github.com/Narek-Pogosian"
+        target="_blank"
+        variant="ghost"
+        size="icon"
+      >
+        <span class="sr-only">Link to my github</span>
+        <GitHubIcon />
+      </Link>
+    </div>
   </div>
 </header>
+
+<!-- ? Might not need to change on scroll -->
+<script is:inline>
+  const header = document.querySelector("#main-header");
+
+  window.addEventListener("scroll", () => {
+    const styling = ["shadow", "backdrop-blur-md"];
+
+    if (window.scrollY > 0) {
+      header.classList.add(...styling);
+    } else {
+      header.classList.remove(...styling);
+    }
+  });
+</script>

@@ -31,12 +31,6 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: hsla(var(--primary-500), 0.7);
-  /* background-color: rgb(135, 129, 129); */
+  background-color: rgb(135, 129, 129);
   border-radius: 5px;
 }
-
-/* ::selection {
-  background-color: hsl(var(--primary-500));
-  color: hsl(var(--primary-foreground));
-} */
