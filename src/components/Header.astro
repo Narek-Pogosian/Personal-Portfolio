@@ -4,7 +4,7 @@ import GitHubIcon from "./icons/GitHubIcon.astro";
 import Link from "./ui/Link.astro";
 ---
 
-<header class="fixed left-0 top-0 w-full" id="main-header">
+<header class="fixed left-0 top-0 z-50 w-full" id="main-header">
   <div class="container flex h-20 items-center justify-between">
     <div class="flex items-center gap-4 md:gap-8">
       <Link
@@ -36,7 +36,7 @@ import Link from "./ui/Link.astro";
   const header = document.querySelector("#main-header");
 
   window.addEventListener("scroll", () => {
-    const styling = ["shadow", "backdrop-blur-md"];
+    const styling = ["shadow", "backdrop-blur-sm"];
 
     if (window.scrollY > 0) {
       header.classList.add(...styling);
