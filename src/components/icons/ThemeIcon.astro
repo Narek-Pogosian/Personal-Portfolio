@@ -1,9 +1,21 @@
 <svg width="24px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-  <path
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    stroke-width="2"
+    stroke-linecap="round"
+    stroke-linejoin="round"
     class="sun"
-    fill-rule="evenodd"
-    d="M12 17.5a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11zm0 1.5a7 7 0 1 0 0-14 7 7 0 0 0 0 14zm12-7a.8.8 0 0 1-.8.8h-2.4a.8.8 0 0 1 0-1.6h2.4a.8.8 0 0 1 .8.8zM4 12a.8.8 0 0 1-.8.8H.8a.8.8 0 0 1 0-1.6h2.5a.8.8 0 0 1 .8.8zm16.5-8.5a.8.8 0 0 1 0 1l-1.8 1.8a.8.8 0 0 1-1-1l1.7-1.8a.8.8 0 0 1 1 0zM6.3 17.7a.8.8 0 0 1 0 1l-1.7 1.8a.8.8 0 1 1-1-1l1.7-1.8a.8.8 0 0 1 1 0zM12 0a.8.8 0 0 1 .8.8v2.5a.8.8 0 0 1-1.6 0V.8A.8.8 0 0 1 12 0zm0 20a.8.8 0 0 1 .8.8v2.4a.8.8 0 0 1-1.6 0v-2.4a.8.8 0 0 1 .8-.8zM3.5 3.5a.8.8 0 0 1 1 0l1.8 1.8a.8.8 0 1 1-1 1L3.5 4.6a.8.8 0 0 1 0-1zm14.2 14.2a.8.8 0 0 1 1 0l1.8 1.7a.8.8 0 0 1-1 1l-1.8-1.7a.8.8 0 0 1 0-1z"
-  ></path>
+    ><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2"></path><path
+      d="M12 20v2"></path><path d="m4.93 4.93 1.41 1.41"></path><path
+      d="m17.66 17.66 1.41 1.41"></path><path d="M2 12h2"></path><path
+      d="M20 12h2"></path><path d="m6.34 17.66-1.41 1.41"></path><path
+      d="m19.07 4.93-1.41 1.41"></path></svg
+  >
   <path
     class="moon"
     fill-rule="evenodd"
@@ -15,14 +27,18 @@
   .moon {
     fill: black;
   }
+
   .sun {
     fill: transparent;
+    color: transparent;
   }
 
   :global(.dark) .moon {
     fill: transparent;
   }
+
   :global(.dark) .sun {
     fill: white;
+    color: white;
   }
 </style>

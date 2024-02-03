@@ -1,3 +1,5 @@
+const defaultTheme = require("tailwindcss/defaultTheme");
+
 /** @type {import('tailwindcss').Config} */
 export default {
   content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
@@ -14,6 +16,9 @@ export default {
       },
     },
     extend: {
+      fontFamily: {
+        sans: ["Fira Sans", ...defaultTheme.fontFamily.sans],
+      },
       colors: {
         primary: {
           DEFAULT: "hsl(var(--primary-500))",
