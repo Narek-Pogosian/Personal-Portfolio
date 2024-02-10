@@ -5,7 +5,7 @@ import Link from "./ui/Link.astro";
 ---
 
 <header
-  class="fixed left-0 top-0 z-40 w-full backdrop-blur-sm"
+  class="fixed left-0 top-0 z-40 w-full"
   id="main-header"
 >
   <div class="container flex h-20 items-center justify-between">
@@ -16,7 +16,7 @@ import Link from "./ui/Link.astro";
         size="sm"
         className="px-0 text-xl font-bold !no-underline"
       >
-        LOGO
+        Portfolio
       </Link>
     </div>
     <div class="flex items-center gap-2">
@@ -34,11 +34,11 @@ import Link from "./ui/Link.astro";
   </div>
 </header>
 
-<!-- <script is:inline>
+<script is:inline>
   const header = document.querySelector("#main-header");
 
   window.addEventListener("scroll", () => {
-    const styling = ["shadow", "backdrop-blur-sm"];
+    const styling = ["shadow", "backdrop-blur-md"];
 
     if (window.scrollY > 0) {
       header.classList.add(...styling);
@@ -46,4 +46,4 @@ import Link from "./ui/Link.astro";
       header.classList.remove(...styling);
     }
   });
-</script> -->
+</script>

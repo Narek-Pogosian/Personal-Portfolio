@@ -1,4 +1,5 @@
 ---
+import Button from "@/components/ui/Button.astro";
 import Layout from "../layouts/Layout.astro";
 import { getCollection } from "astro:content";
 
@@ -6,20 +7,26 @@ const projects = await getCollection("projects");
 ---
 
 <Layout title="Home">
-  <section class="flex flex-col gap-8 pt-28 lg:flex-row">
-    <div class="lg:flex-1">
-      <h1 class="mb-8 text-5xl font-bold">Narek Pogosian</h1>
-      <p>
-        Astro is a new kind of static site builder that delivers lightning-fast
-        performance and modern developer ergonomics. It's the first of its kind
-        to bring together the best parts of modern web development in one
-        opinionated, batteries-included package.
-      </p>
+  <section class="pt-28">
+    <div class="flex flex-col gap-8 lg:flex-row">
+      <div class="lg:flex-1">
+        <h1 class="mb-8 text-7xl font-bold">Narek Pogosian</h1>
+        <p class="text-lg">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, ullam
+          et? Perferendis animi iusto nemo consequatur voluptates ullam
+          explicabo quae ab corporis, dolor magnam impedit quaerat molestias
+          quos veniam? Amet qui fugit possimus aliquid porro officia voluptatem
+          sunt praesentium accusantium, optio vitae error laudantium ad
+          consectetur ipsa perferendis natus cumque voluptates? Facere, voluptas
+          quasi sit voluptatem ipsa excepturi voluptates. Modi rem inventore eos
+          tenetur quidem neque sequi, officiis quam magnam!
+        </p>
+      </div>
+      <div class="grid place-content-center lg:flex-1">Image</div>
     </div>
-    <div class="lg:flex-1">Image</div>
   </section>
 
-  <section class="pt-28">
+  <section class="pt-28" id="projects">
     <h2 class="mb-4 text-center text-3xl font-bold">Projects</h2>
     <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
       {
