@@ -1,16 +1,35 @@
 ---
-import Layout from "../layouts/Layout.astro";
 import { getCollection } from "astro:content";
+import Layout from "../layouts/Layout.astro";
+import ReactIcon from "@/components/icons/hero/ReactIcon.astro";
+import VueIcon from "@/components/icons/hero/VueIcon.astro";
+import CssIcon from "@/components/icons/hero/CssIcon.astro";
+import HtmlIcon from "@/components/icons/hero/HtmlIcon.astro";
+import NextIcon from "@/components/icons/hero/NextIcon.astro";
+import NodeIcon from "@/components/icons/hero/NodeIcon.astro";
+import TailwindIcon from "@/components/icons/hero/TailwindIcon.astro";
+import TypeScriptIcon from "@/components/icons/hero/TypeScriptIcon.astro";
+import NuxtIcon from "@/components/icons/hero/NuxtIcon.astro";
+import GoIcon from "@/components/icons/hero/GoIcon.astro";
 
 const projects = await getCollection("projects");
 ---
 
 <Layout title="Home">
+  <div
+    class="absolute -top-32 left-1/2 -z-50 hidden h-96 w-4/5 -translate-x-1/2 rounded-full bg-slate-700 opacity-15 blur-3xl dark:block lg:w-1/2"
+  >
+  </div>
+
   <section class="pt-28">
-    <div class="flex flex-col gap-8 lg:flex-row">
-      <div class="lg:flex-1">
-        <h1 class="mb-8 text-7xl font-bold">Narek Pogosian</h1>
-        <p class="text-lg">
+    <div class="grid gap-8 lg:grid-cols-3 lg:gap-16">
+      <div class="text-center lg:col-span-2 lg:text-left">
+        <h1
+          class="mb-8 text-balance text-4xl font-bold sm:text-5xl lg:text-6xl"
+        >
+          Hi, I am Narek Pogosian
+        </h1>
+        <p class="text-balance text-lg leading-8">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, ullam
           et? Perferendis animi iusto nemo consequatur voluptates ullam
           explicabo quae ab corporis, dolor magnam impedit quaerat molestias
@@ -21,10 +40,25 @@ const projects = await getCollection("projects");
           tenetur quidem neque sequi, officiis quam magnam!
         </p>
       </div>
-      <div class="grid place-content-center lg:flex-1">Image</div>
+      <div class="-skew-y-6 space-y-8 pt-14 text-slate-700 opacity-50">
+        <div class="flex justify-center gap-2">
+          <TypeScriptIcon />
+          <HtmlIcon />
+          <CssIcon />
+        </div>
+        <div class="flex justify-center gap-2">
+          <ReactIcon />
+          <NextIcon />
+          <VueIcon />
+          <NuxtIcon />
+        </div>
+        <div class="flex justify-center gap-8">
+          <GoIcon />
+          <NodeIcon />
+        </div>
+      </div>
     </div>
   </section>
-
   <section class="pt-28" id="projects">
     <h2 class="mb-4 text-center text-3xl font-bold">Projects</h2>
     <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">

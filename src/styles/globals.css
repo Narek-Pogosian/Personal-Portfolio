@@ -18,6 +18,7 @@ html {
 
 body {
   overflow-y: scroll;
+  overflow-x: hidden;
   background-color: hsl(var(--background));
   color: hsl(var(--foreground));
 }
