@@ -7,7 +7,6 @@ import CssIcon from "@/components/icons/hero/CssIcon.astro";
 import HtmlIcon from "@/components/icons/hero/HtmlIcon.astro";
 import NextIcon from "@/components/icons/hero/NextIcon.astro";
 import NodeIcon from "@/components/icons/hero/NodeIcon.astro";
-import TailwindIcon from "@/components/icons/hero/TailwindIcon.astro";
 import TypeScriptIcon from "@/components/icons/hero/TypeScriptIcon.astro";
 import NuxtIcon from "@/components/icons/hero/NuxtIcon.astro";
 import GoIcon from "@/components/icons/hero/GoIcon.astro";
@@ -21,7 +20,7 @@ const projects = await getCollection("projects");
   >
   </div>
 
-  <section class="pt-28">
+  <section class="pt-28 lg:pt-36">
     <div class="grid gap-8 lg:grid-cols-3 lg:gap-16">
       <div class="text-center lg:col-span-2 lg:text-left">
         <h1
@@ -29,15 +28,16 @@ const projects = await getCollection("projects");
         >
           Hi, I am Narek Pogosian
         </h1>
-        <p class="text-balance text-lg leading-8">
+        <p class="text-pretty text-lg leading-8">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, ullam
           et? Perferendis animi iusto nemo consequatur voluptates ullam
           explicabo quae ab corporis, dolor magnam impedit quaerat molestias
-          quos veniam? Amet qui fugit possimus aliquid porro officia voluptatem
-          sunt praesentium accusantium, optio vitae error laudantium ad
-          consectetur ipsa perferendis natus cumque voluptates? Facere, voluptas
-          quasi sit voluptatem ipsa excepturi voluptates. Modi rem inventore eos
-          tenetur quidem neque sequi, officiis quam magnam!
+          quos veniam? <br />
+          <br /> Amet qui fugit possimus aliquid porro officia voluptatem sunt
+          praesentium accusantium, optio vitae error laudantium ad consectetur
+          ipsa perferendis natus cumque voluptates? Facere, voluptas quasi sit
+          voluptatem ipsa excepturi voluptates. Modi rem inventore eos tenetur
+          quidem neque sequi, officiis quam magnam!
         </p>
       </div>
       <div class="-skew-y-6 space-y-8 pt-14 text-slate-700 opacity-50">
@@ -64,9 +64,9 @@ const projects = await getCollection("projects");
     <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
       {
         projects.map((project) => (
-          <div class="rounded-lg border border-muted p-4">
+          <div class="rounded-lg border border-accent p-4">
             <h3 class="mb-2 text-xl font-bold">{project.data.title}</h3>
-            <p>{project.data.description}</p>
+            <p class="text-muted-foreground">{project.data.description}</p>
           </div>
         ))
       }

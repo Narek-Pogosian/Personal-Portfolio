@@ -4,7 +4,7 @@ const projectCollection = defineCollection({
   type: "content",
   schema: z.object({
     title: z.string().max(40, "Max 40 characters for title"),
-    description: z.string().max(80, "Max 80 characters for description"),
+    description: z.string(),
     techStack: z.array(z.string()),
   }),
 });

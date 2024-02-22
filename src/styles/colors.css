@@ -19,8 +19,8 @@
   --background: 240, 5%, 7%;
   --foreground: 0, 0%, 95%;
 
-  --muted: 0 0% 15%;
-  --muted-foreground: 0 0% 60%;
+  --muted: 240, 5%, 15%;
+  --muted-foreground: 240, 10%, 70%;
 
   --accent: 240, 15%, 15%;
   --accent-foreground: 240 10% 93%;
