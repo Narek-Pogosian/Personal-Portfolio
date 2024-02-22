@@ -1,11 +1,10 @@
 :root {
-  --primary-300: 25, 95%, 85%;
-  --primary-400: 25, 92%, 74%;
-  --primary-500: 25, 95%, 53%;
-  --primary-600: 26, 83%, 56%;
+  --primary-400: 198, 93%, 60%;
+  --primary-500: 199, 89%, 48%;
+  --primary-600: 200, 98%, 39%;
   --primary-foreground: 0 0% 100%;
 
-  --background: 0, 0%, 98%;
+  --background: 0, 0%, 100%;
   --foreground: 0 0% 0%;
 
   --muted: 0 0% 93%;
@@ -16,6 +15,11 @@
 }
 
 .dark {
+  --primary-400: 172, 66%, 50%;
+  --primary-500: 173, 80%, 40%;
+  --primary-600: 175, 84%, 32%;
+  --primary-foreground: 0 0% 100%;
+
   --background: 240, 5%, 7%;
   --foreground: 0, 0%, 95%;
 

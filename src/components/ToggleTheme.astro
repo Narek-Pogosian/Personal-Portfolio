@@ -10,23 +10,26 @@ import Button from "./ui/Button.astro";
 
 <script is:inline>
   function colorMode() {
-    if (
-      !localStorage.getItem("theme") &&
-      window.matchMedia("(prefers-color-scheme:dark)").matches
-    ) {
-      document.documentElement.classList.add("dark");
+    const rootElement = document.documentElement;
+
+    if (!localStorage.getItem("theme")) {
       localStorage.setItem("theme", "dark");
-    } else if (localStorage.getItem("theme") === "dark") {
-      document.documentElement.classList.add("dark");
+      rootElement.classList.add("dark");
     } else {
-      document.documentElement.classList.remove("dark");
+      const localTheme = localStorage.getItem("theme");
+
+      if (localTheme === "dark") {
+        rootElement.classList.add("dark");
+      } else {
+        rootElement.classList.remove("dark");
+      }
     }
   }
 
   function toggleMode() {
     const storageTheme = localStorage.getItem("theme");
-
     document.documentElement.classList.toggle("dark");
+
     if (storageTheme === "dark") {
       localStorage.setItem("theme", "light");
     } else {

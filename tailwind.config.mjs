@@ -22,7 +22,6 @@ export default {
       colors: {
         primary: {
           DEFAULT: "hsl(var(--primary-500))",
-          300: "hsl(var(--primary-300))",
           400: "hsl(var(--primary-400))",
           600: "hsl(var(--primary-600))",
           foreground: "hsl(var(--primary-foreground))",
