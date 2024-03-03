@@ -1,6 +1,8 @@
 ---
 import { getCollection } from "astro:content";
 import Layout from "../layouts/Layout.astro";
+import Card from "@/components/Card.astro";
+import { prefetch } from "astro:prefetch";
 
 const projects = await getCollection("projects");
 ---
@@ -11,7 +13,8 @@ const projects = await getCollection("projects");
   >
   </div>
 
-  <section class="pt-32 lg:pt-40">
+  <!-- HERO SECTION -->
+  <section class="min-h-full pt-32 lg:pt-40">
     <div class="grid gap-8 lg:grid-cols-3 lg:gap-16">
       <div class="text-center lg:col-span-2 lg:text-left">
         <h1
@@ -33,34 +36,19 @@ const projects = await getCollection("projects");
       </div>
     </div>
   </section>
-  <section class="pt-32">
+
+  <!-- PROJECTS -->
+  <section class="min-h-full pt-24">
     <h2 class="mb-4 text-center text-3xl font-bold">Projects</h2>
     <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
       {
         projects.map((project) => (
-          <div class="card bg-element rounded-lg p-4 shadow-lg">
-            <h3 class="title mb-2 text-xl font-bold">{project.data.title}</h3>
-            <p class="text-muted-foreground">{project.data.description}</p>
-          </div>
+          <Card
+            title={project.data.title}
+            description={project.data.description}
+          />
         ))
       }
     </div>
   </section>
 </Layout>
-
-<style>
-  .card {
-    perspective: 400px;
-  }
-
-  .card .title {
-    transform: translateZ(0);
-    transition: 0.5s;
-  }
-
-  .card:hover .title {
-    transform: translateZ(10px);
-    scale: 1.2;
-    color: red;
-  }
-</style>

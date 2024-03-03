@@ -1,0 +1,30 @@
+---
+export interface Props {
+  title: string;
+  description: string;
+}
+
+const { description, title } = Astro.props;
+---
+
+<div class="card rounded-lg bg-element p-4 shadow-lg">
+  <h3 class="title mb-2 text-xl font-bold">{title}</h3>
+  <p class="text-muted-foreground">{description}</p>
+</div>
+
+<style>
+  .card {
+    perspective: 400px;
+  }
+
+  .card .title {
+    transform: translateZ(0);
+    transition: 0.5s;
+  }
+
+  .card:hover .title {
+    transform: translateZ(10px);
+    scale: 1.2;
+    color: red;
+  }
+</style>
