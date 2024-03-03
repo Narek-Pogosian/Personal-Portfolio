@@ -38,7 +38,9 @@ const projects = await getCollection("projects");
 
   <!-- PROJECTS -->
   <section class="min-h-full pt-24">
-    <h2 class="mb-8 text-center text-3xl font-bold">Projects</h2>
+    <h2 class="mb-8 text-center text-3xl font-bold">
+      What I have been working on
+    </h2>
     <div class="grid grid-cols-1 gap-8 md:grid-cols-2 xl:grid-cols-3">
       {
         projects.map((project) => (
@@ -46,9 +48,11 @@ const projects = await getCollection("projects");
             title={project.data.title}
             description={project.data.description}
             link="/projects"
+            isProject
           />
         ))
       }
+      <Card title="Working at Fictive Reality" description="Lorem" link="/" />
     </div>
   </section>
 </Layout>
