@@ -2,29 +2,33 @@
 export interface Props {
   title: string;
   description: string;
+  techStack?: string[];
+  link: string;
 }
 
-const { description, title } = Astro.props;
+const { description, title, techStack, link } = Astro.props;
 ---
 
-<div class="card rounded-lg bg-element p-4 shadow-lg">
-  <h3 class="title mb-2 text-xl font-bold">{title}</h3>
+<a
+  href={link}
+  class="cursor-pointer space-y-2 rounded-lg border border-accent bg-element p-4 shadow-md transition-shadow duration-300
+  hover:shadow-xl dark:shadow-black/30"
+>
+  <h3 class="title text-xl font-bold">{title}</h3>
   <p class="text-muted-foreground">{description}</p>
-</div>
-
-<style>
-  .card {
-    perspective: 400px;
-  }
-
-  .card .title {
-    transform: translateZ(0);
-    transition: 0.5s;
-  }
-
-  .card:hover .title {
-    transform: translateZ(10px);
-    scale: 1.2;
-    color: red;
-  }
-</style>
+  <div class="flex items-center justify-between">
+    {
+      techStack && (
+        <ul class="mt-2 flex flex-wrap">
+          {techStack.map((tech) => (
+            <li class="mb-2 mr-2">
+              <span class="rounded-md bg-accent p-1 text-xs text-element">
+                {tech}
+              </span>
+            </li>
+          ))}
+        </ul>
+      )
+    }
+  </div>
+</a>
