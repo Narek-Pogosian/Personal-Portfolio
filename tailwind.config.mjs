@@ -38,6 +38,9 @@ export default {
           DEFAULT: "hsl(var(--element))",
           foreground: "hsl(var(--element-foreground))",
         },
+        border: {
+          DEFAULT: "hsl(var(--border))",
+        },
         background: {
           DEFAULT: "hsl(var(--background))",
         },

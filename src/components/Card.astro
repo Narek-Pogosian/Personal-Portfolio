@@ -1,8 +1,10 @@
 ---
+import Link from "./ui/Link.astro";
+
 export interface Props {
   title: string;
   description: string;
-  techStack?: string[];
+  techStack?: { name: string; icon: string }[];
   link: string;
   isProject?: boolean;
 }
@@ -10,12 +12,11 @@ export interface Props {
 const { description, title, techStack, link, isProject } = Astro.props;
 ---
 
-<a
-  href={link}
-  class="cursor-pointer space-y-2 rounded-lg border border-accent bg-element p-4 shadow-md transition-shadow duration-300
-  hover:shadow-xl dark:shadow-black/30"
+<li
+  class="border-border flex flex-col rounded-lg border bg-element p-4 shadow-lg
+  transition-shadow duration-300 hover:shadow-xl dark:shadow-black/30"
 >
-  <div class="flex items-center justify-between">
+  <div class="mb-3 flex items-center justify-between">
     <h3 class="title truncate text-xl font-bold">{title}</h3>
     {
       isProject && (
@@ -25,20 +26,19 @@ const { description, title, techStack, link, isProject } = Astro.props;
       )
     }
   </div>
-  <p class="text-muted-foreground">{description}</p>
-  <div class="flex items-center justify-between">
-    {
-      techStack && (
-        <ul class="mt-2 flex flex-wrap">
-          {techStack.map((tech) => (
-            <li class="mb-2 mr-2">
-              <span class="rounded-md bg-accent p-1 text-xs text-element">
-                {tech}
-              </span>
-            </li>
-          ))}
-        </ul>
-      )
-    }
+  {
+    techStack && (
+      <ul class="mb-2 flex flex-wrap gap-2">
+        {techStack.map((tech) => (
+          <li title={tech.name}>
+            <img src={tech.icon} alt={tech.name} width="24" height="24" />
+          </li>
+        ))}
+      </ul>
+    )
+  }
+  <p class="mb-4 text-sm text-muted-foreground">{description}</p>
+  <div class="mt-auto flex justify-end">
+    <Link href={link} class="text-primary" size="sm">Read more</Link>
   </div>
-</a>
+</li>

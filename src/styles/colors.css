@@ -15,6 +15,8 @@
 
   --accent: 240, 15%, 91%;
   --accent-foreground: 240 10% 3%;
+
+  --border: 240, 15%, 91%;
 }
 
 .dark {
@@ -34,4 +36,6 @@
 
   --accent: 240, 15%, 15%;
   --accent-foreground: 240 10% 93%;
+
+  --border: 240, 5%, 15%;
 }

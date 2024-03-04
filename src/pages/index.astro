@@ -41,18 +41,19 @@ const projects = await getCollection("projects");
     <h2 class="mb-8 text-center text-3xl font-bold">
       What I have been working on
     </h2>
-    <div class="grid grid-cols-1 gap-8 md:grid-cols-2 xl:grid-cols-3">
+    <ul class="grid grid-cols-1 gap-8 md:grid-cols-2 xl:grid-cols-3">
       {
         projects.map((project) => (
           <Card
             title={project.data.title}
             description={project.data.description}
             link="/projects"
+            techStack={project.data.techStack}
             isProject
           />
         ))
       }
       <Card title="Working at Fictive Reality" description="Lorem" link="/" />
-    </div>
+    </ul>
   </section>
 </Layout>
