@@ -5,5 +5,6 @@ description:
   et? Perferendis animi iusto nemo consequatur voluptates ullam
   explicabo quae ab corporis, dolor magnam impedit quaerat molestias
   quos veniam?"
-techStack: [{ name: "SCSS", icon: "/scss.svg" }]
+techStack:
+  [{ name: "SCSS", icon: "/scss.svg" }, { name: "Astro", icon: "/astro.svg" }]
 ---
