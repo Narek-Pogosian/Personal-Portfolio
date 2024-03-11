@@ -9,16 +9,17 @@ const projects = await getCollection("projects");
 
 <Layout title="Home">
   <div
-    class="absolute -top-32 left-1/2 -z-50 hidden h-96 w-4/5 -translate-x-1/2 rounded-full bg-element blur-2xl dark:block lg:w-1/2"
+    aria-hidden="true"
+    class="absolute -top-32 left-1/2 -z-50 h-96 w-4/5 -translate-x-1/2 rounded-full bg-primary opacity-10 blur-2xl dark:bg-element dark:opacity-100 lg:w-1/2"
   >
   </div>
 
   <!-- HERO SECTION -->
-  <section class="min-h-full pt-32 lg:pt-40">
-    <div class="grid gap-8 lg:grid-cols-3 lg:gap-16">
-      <div class="text-center lg:col-span-2 lg:text-left">
+  <section class="min-h-full pt-20 md:pt-32 lg:pt-40">
+    <div class="mx-auto max-w-3xl">
+      <div class="lg:text-center">
         <h1
-          class="mb-8 text-balance text-4xl font-bold sm:text-5xl lg:text-6xl"
+          class="mb-8 text-balance text-center text-4xl font-bold sm:text-5xl lg:text-6xl"
         >
           Hi, I am Narek
         </h1>
