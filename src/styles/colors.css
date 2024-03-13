@@ -1,6 +1,6 @@
 :root {
-  --primary-400: 262, 83%, 64%;
-  --primary-500: 262, 83%, 58%;
+  --primary-400: 262, 83%, 67%;
+  --primary-500: 262, 83%, 56%;
   --primary-600: 262, 83%, 50%;
   --primary-foreground: 0 0% 100%;
 
@@ -17,15 +17,16 @@
   --accent-foreground: 240 10% 3%;
 
   --border: 240, 15%, 91%;
+  --scrollbar: 240, 15%, 80%;
 }
 
 .dark {
+  color-scheme: dark;
+
   --primary-400: 262, 83%, 70%;
   --primary-500: 262, 83%, 64%;
   --primary-600: 262, 83%, 55%;
-  /* --primary-400: 172, 66%, 45%;
-  --primary-500: 173, 80%, 35%;
-  --primary-600: 175, 84%, 28%; */
+
   --primary-foreground: 0 0% 100%;
 
   --background: 240, 5%, 7%;
@@ -41,4 +42,5 @@
   --accent-foreground: 240 10% 93%;
 
   --border: 240, 5%, 15%;
+  --scrollbar: 240, 5%, 25%;
 }

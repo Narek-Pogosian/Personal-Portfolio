@@ -47,6 +47,9 @@ export default {
         foreground: {
           DEFAULT: "hsl(var(--foreground))",
         },
+        scrollbar: {
+          DEFAULT: "hsl(var(--scrollbar))",
+        },
       },
       animation: {
         shine: "shine 1.5s infinite",

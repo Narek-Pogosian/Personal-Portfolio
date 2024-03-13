@@ -32,6 +32,6 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: rgb(135, 129, 129);
+  background-color: hsl(var(--scrollbar));
   border-radius: 5px;
 }

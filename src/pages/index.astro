@@ -44,13 +44,13 @@ const projects = await getCollection("projects");
       What I have been working on
     </h2>
     <ul class="grid grid-cols-1 gap-8 md:grid-cols-2 xl:grid-cols-3">
-      <Card title="Working at Fictive Reality" description="Lorem" link="/" />
+      <Card title="Working at Fictive Reality" description="Lorem" href="/" />
       {
         projects.map((project) => (
           <Card
             title={project.data.title}
             description={project.data.description}
-            link={"/project/" + createSlug(project.data.title)}
+            href={"/project/" + createSlug(project.data.title)}
             techStack={project.data.techStack}
             isProject
           />

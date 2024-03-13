@@ -9,8 +9,9 @@ export const button = cva(
     variants: {
       variant: {
         primary:
-          "bg-gradient-to-b relative to-primary-600 from-primary-400 text-primary-foreground after:w-full after:bg-gradient-to-r after:from-transparent after:via-white/25 after:to-transparent focus-visible:ring-offset-2 focus-visible:ring-offset-background after:h-full after:duration-500 after:absolute after:-left-full hover:after:animate-shine overflow-hidden shadow-lg",
-        secondary: "",
+          "bg-gradient-to-br relative from-primary-600 to-primary-400 text-primary-foreground after:w-full after:bg-gradient-to-r after:from-transparent after:via-white/25 after:to-transparent focus-visible:ring-offset-2 focus-visible:ring-offset-background after:h-full after:duration-500 after:absolute after:-left-full hover:after:animate-shine overflow-hidden shadow-lg",
+        secondary:
+          "border dark:border-neutral-700 shadow-[inset_0_-3px_6px_-2px_#E7E5FA] dark:shadow-none bg-white dark:bg-transparent dark:bg-gradient-to-br dark:from-white/[0.075] dark:via-white/[0.075] dark:to-white/20",
         ghost: "hover:bg-muted text-foreground",
         link: "hover:underline underline-offset-2",
       },
@@ -30,7 +31,6 @@ export interface Props
   extends HTMLAttributes<"button">,
     VariantProps<typeof button> {
   className?: string;
-  asChild?: boolean;
 }
 
 const { variant = "primary", size = "md", className, ...rest } = Astro.props;
@@ -39,3 +39,14 @@ const { variant = "primary", size = "md", className, ...rest } = Astro.props;
 <button class={cn(button({ variant, size }), className)} {...rest}>
   <slot />
 </button>
+
+<style>
+  .secondary {
+    background-image: linear-gradient(
+      to bottom right,
+      rgb(255 255 255 / 0.075),
+      rgb(255 255 255 / 0.075),
+      rgb(255 255 255 / 0.2)
+    );
+  }
+</style>

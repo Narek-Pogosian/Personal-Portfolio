@@ -1,44 +1,40 @@
 ---
-import Link from "./ui/Link.astro";
+import Badge from "./ui/Badge.astro";
 
 export interface Props {
   title: string;
   description: string;
   techStack?: { name: string; icon: string }[];
-  link: string;
+  href: string;
   isProject?: boolean;
 }
 
-const { description, title, techStack, link, isProject } = Astro.props;
+const { description, title, techStack, href, isProject } = Astro.props;
 ---
 
 <li
-  class="flex flex-col rounded-lg border border-border bg-element p-4 shadow-lg
+  class="rounded-lg border border-border bg-element shadow-lg
   transition-shadow duration-300 hover:shadow-xl dark:shadow-black/30"
 >
-  <div class="mb-3 flex items-center justify-between">
-    <h3 class="title truncate text-xl font-bold">{title}</h3>
+  <a href={href} class="flex h-full flex-col px-4 pb-6 pt-4">
+    <div class="mb-3 flex items-center justify-between">
+      <h3 class="title truncate text-xl font-bold">{title}</h3>
+      {isProject && <Badge>Project</Badge>}
+    </div>
     {
-      isProject && (
-        <span class="rounded-full border border-primary px-3 py-1 text-xs font-semibold text-primary dark:border-primary-400 dark:text-primary-400">
-          Project
-        </span>
+      techStack && (
+        <ul class="mb-4 flex flex-wrap gap-2">
+          {techStack.map((tech) => (
+            <li title={tech.name}>
+              <img src={tech.icon} alt={tech.name} width="24" height="24" />
+            </li>
+          ))}
+        </ul>
       )
     }
-  </div>
-  {
-    techStack && (
-      <ul class="mb-2 flex flex-wrap gap-2">
-        {techStack.map((tech) => (
-          <li title={tech.name}>
-            <img src={tech.icon} alt={tech.name} width="24" height="24" />
-          </li>
-        ))}
-      </ul>
-    )
-  }
-  <p class="mb-4 text-sm text-muted-foreground">{description}</p>
-  <div class="mt-auto flex justify-end">
-    <Link href={link} class="text-primary" size="sm">Read more</Link>
-  </div>
+    <p class="text-sm text-muted-foreground">{description}</p>
+    <!-- <div class="mt-auto flex justify-end">
+      <Link href={link} size="sm">Read more</Link>
+    </div> -->
+  </a>
 </li>
