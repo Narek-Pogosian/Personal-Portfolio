@@ -11,6 +11,7 @@ techStack:
     { name: "React Query", icon: "/react-query.svg" },
     { name: "Tailwind CSS", icon: "/tailwind.svg" },
   ]
+github: "https://github.com/Narek-Pogosian/Tv-Movies"
 ---
 
 ## Title

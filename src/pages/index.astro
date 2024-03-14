@@ -44,7 +44,11 @@ const projects = await getCollection("projects");
       What I have been working on
     </h2>
     <ul class="grid grid-cols-1 gap-8 md:grid-cols-2 xl:grid-cols-3">
-      <Card title="Working at Fictive Reality" description="Lorem" href="/" />
+      <Card
+        title="Working at Fictive Reality"
+        description="Lorem"
+        href="/post/working-at-fictive-reality"
+      />
       {
         projects.map((project) => (
           <Card

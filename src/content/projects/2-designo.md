@@ -7,6 +7,7 @@ description:
   quos veniam?"
 techStack:
   [{ name: "SCSS", icon: "/scss.svg" }, { name: "Astro", icon: "/astro.svg" }]
+github: "https://github.com/Narek-Pogosian/Designo"
 ---
 
 ## Hello
@@ -17,6 +18,18 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo eum repellendus ut,
 
 w
 wepomgwemgåwemg
+
+### SOIfnio
+
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo eum repellendus ut, ducimus autem quibusdam quisquam praesentium nisi laboriosam laborum fugit quod similique at debitis incidunt voluptate amet labore illo!
+
+### SOIfnio
+
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo eum repellendus ut, ducimus autem quibusdam quisquam praesentium nisi laboriosam laborum fugit quod similique at debitis incidunt voluptate amet labore illo!
+
+### SOIfnio
+
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo eum repellendus ut, ducimus autem quibusdam quisquam praesentium nisi laboriosam laborum fugit quod similique at debitis incidunt voluptate amet labore illo!
 
 ### SOIfnio
 

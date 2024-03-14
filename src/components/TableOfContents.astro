@@ -26,12 +26,12 @@ const grouppedHeadings = headings.reduce((array, heading) => {
   <ol>
     {
       grouppedHeadings.map((h) => (
-        <li>
+        <li class="mt-2">
           <a href={`#${h.slug}`} class="text-base font-medium">
             {h.text}
           </a>
           {h.subheadings.length > 0 && (
-            <ol class="ml-2">
+            <ol class="ml-4">
               {h.subheadings.map((sub) => (
                 <li>
                   <a href={`#${sub.slug}`} class="text-sm">

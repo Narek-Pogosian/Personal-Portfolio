@@ -1,0 +1,31 @@
+---
+import TableOfContents from "@/components/TableOfContents.astro";
+import BlogLayout from "@/layouts/BlogLayout.astro";
+import Layout from "@/layouts/Layout.astro";
+import { createSlug } from "@/lib/utils";
+import { getCollection } from "astro:content";
+
+export async function getStaticPaths() {
+  const postEntries = await getCollection("posts");
+
+  return postEntries.map((post) => ({
+    params: { slug: createSlug(post.data.title) },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+const { Content, headings } = await post.render();
+---
+
+<Layout title={post.data.title}>
+  <BlogLayout>
+    <div slot="toc">
+      <TableOfContents headings={headings} />
+    </div>
+    <div slot="content">
+      <h1>{post.data.title}</h1>
+      <Content />
+    </div>
+  </BlogLayout>
+</Layout>
