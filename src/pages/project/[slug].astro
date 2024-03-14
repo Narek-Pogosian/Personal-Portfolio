@@ -1,0 +1,41 @@
+---
+import TableOfContents from "@/components/TableOfContents.astro";
+import Link from "@/components/ui/Link.astro";
+import Layout from "@/layouts/Layout.astro";
+import { createSlug } from "@/lib/utils";
+import { getCollection } from "astro:content";
+
+export async function getStaticPaths() {
+  const blogEntries = await getCollection("projects");
+
+  return blogEntries.map((project) => ({
+    params: { slug: createSlug(project.data.title) },
+    props: { project },
+  }));
+}
+
+const { project } = Astro.props;
+const { Content, headings } = await project.render();
+---
+
+<Layout title={project.data.title}>
+  <div class="pb-10 pt-20">
+    <div class="flex gap-12">
+      <aside
+        class="sticky top-20 hidden h-fit min-w-60 shrink-0 border-r border-border py-2 pr-4 lg:block"
+      >
+        <TableOfContents headings={headings} />
+        <div class="mt-8 flex flex-col gap-4">
+          <Link variant="secondary" href="#" size="sm" className="text-sm">
+            View on GitHub
+          </Link>
+          <Link href="#" size="sm" className="text-sm">View Website</Link>
+        </div>
+      </aside>
+      <div class="prose max-w-3xl dark:prose-invert">
+        <h1>{project.data.title}</h1>
+        <Content />
+      </div>
+    </div>
+  </div>
+</Layout>
