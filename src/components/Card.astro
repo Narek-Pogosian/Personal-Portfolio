@@ -21,7 +21,7 @@ const { description, title, techStack, href, isProject } = Astro.props;
     class="flex h-full flex-col rounded-lg px-4 pb-6 pt-4 outline-none ring-primary focus-visible:ring-2"
   >
     <div class="mb-3 flex items-center justify-between">
-      <h3 class="title truncate text-xl font-bold">{title}</h3>
+      <h3 class="title truncate text-lg font-bold">{title}</h3>
       {isProject && <Badge>Project</Badge>}
     </div>
     {
@@ -35,7 +35,7 @@ const { description, title, techStack, href, isProject } = Astro.props;
         </ul>
       )
     }
-    <p class="text-sm text-muted-foreground">{description}</p>
+    <p class="text-sm leading-6 text-muted-foreground">{description}</p>
     <!-- <div class="mt-auto flex justify-end">
       <Link href={link} size="sm">Read more</Link>
     </div> -->
