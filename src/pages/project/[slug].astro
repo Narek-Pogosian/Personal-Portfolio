@@ -34,7 +34,18 @@ const { Content, headings } = await project.render();
         >
           <GitHubIcon /> View on GitHub
         </Link>
-        <Link href="#" size="sm" className="text-sm">View Website</Link>
+        {
+          project.data.website && (
+            <Link
+              href={project.data.website}
+              size="sm"
+              className="text-sm"
+              target="_blank"
+            >
+              View Website
+            </Link>
+          )
+        }
       </div>
     </div>
     <div slot="content">

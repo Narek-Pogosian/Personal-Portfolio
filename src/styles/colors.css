@@ -41,5 +41,5 @@
 }
 
 .primary-gradient {
-  background: linear-gradient(90deg, #6366f1, #0ea5e9);
+  background-image: linear-gradient(90deg, #6366f1, #0ea5e9);
 }
